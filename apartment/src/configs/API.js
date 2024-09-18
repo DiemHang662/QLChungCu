@@ -1,11 +1,18 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://192.168.0.108:8000';
+const BASE_URL = 'http://192.168.1.6:8000';
 
 export const endpoints = {
   residents: '/api/residents/',
   createNewAccount: '/api/residents/create-new-account/',
+  lockAccount: (id) => `/api/residents/${id}/lock-account/`,
+  deleteResident: (id) => `/api/residents/${id}/delete-resident/`,
+  updateResident: (id) => `/api/residents/${id}/`,
   currentUser: '/api/residents/current-user/',
+  staffCount:'/api/residents/staff-count/',
+  totalBills:'/api/bills/total-bills/',
+  surveyCount:'/api/surveyresult/survey-count/',
+  flatCount:'/api/flats/flat-count/',
   changePassword: '/api/residents/change-password/',
   changeAvatar: '/api/residents/change-avatar/',
   login: '/o/token/',
@@ -15,10 +22,15 @@ export const endpoints = {
   cartSummary: '/api/cart/cart-summary/',
   updateProductQuantity: '/api/cart/update-product-quantity/',
   deleteProduct: (id) => `/api/cart/${id}/delete-product/`,
+  createOrderFromCart: '/api/order/create-order-from-cart/',
+  orderDetail: (id) => `/api/order/${id}/`,
+  confirmOrder: (id) => `/api/order/${id}/confirm-order/`, 
 
   bills: '/api/bills/',
   billDetail: (id) => `/api/bills/${id}/`,
   createBill: '/api/bills/create-bill/',
+  deleteBill: (id) => `/api/bills/${id}/delete-bill/`,
+  updateBill: (id) => `/api/bills/${id}/`,
   createBillFromCart: (id) => `/api/bills/create-bill-from-cart/${id}/`,
   updateStatus: (id) => `/api/bills/${id}/`,
   momo: '/payment/',
