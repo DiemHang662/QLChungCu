@@ -150,7 +150,74 @@ const Home = () => {
     },
   };
 
+  const barChartData = {
+    labels: ['Đã thanh toán', 'Chưa thanh toán'],
+    datasets: [
+      {
+        label: 'Số lượng hóa đơn',
+        data: [billStats.paid, billStats.unpaid],
+        backgroundColor: ['rgba(255, 99, 132, 0.3)', 'rgba(54, 162, 235, 0.3)'],
+        borderColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)'],
+        borderWidth: 1,
+      },
+    ],
+  };
 
+  const barChartOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: true,
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+        },
+      },
+    },
+  };
+
+
+  // Dữ liệu biểu đồ cho thống kê cư dân
+  const residentChartData = {
+    labels: ['Cư dân', 'Quản trị viên'],
+    datasets: [
+      {
+        label: 'Số lượng',
+        data: [residentStats.residents, residentStats.admins],
+        backgroundColor: ['rgba(255, 205, 86, 0.2)', 'rgba(153, 102, 255, 0.3)'],
+        borderColor: ['rgb(255, 205, 86)', 'rgb(153, 102, 255)'],
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  // Tùy chọn biểu đồ cho thống kê cư dân
+  const residentChartOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: true,
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+        },
+      },
+    },
+  };
 
 
   return (
@@ -237,6 +304,20 @@ const Home = () => {
           <Line data={chartData} options={chartOptions} />
         </div>
 
+        <Row className="bill-statistics">
+          <Col md={6}>
+            <div className="chartBill">
+              <h2>Thống kê hóa đơn</h2>
+              <Bar data={barChartData} options={barChartOptions} />
+            </div>
+          </Col>
+          <Col md={6}>
+            <div className="chartUser">
+              <h2>Thống kê số người dùng</h2>
+              <Bar data={residentChartData} options={residentChartOptions} />
+            </div>
+          </Col>
+        </Row>
 
         <div>
           <h1 className="h1">GIỚI THIỆU</h1>
