@@ -17,7 +17,7 @@ const BillDetail = () => {
         const response = await api.get(endpoints.billDetail(id)); 
         setBill(response.data);
       } catch (error) {
-        console.error('Error fetching bill:', error.response?.data || error.message);
+        console.error('Error fetching bills:', error.response?.data || error.message);
       }
     };
 
