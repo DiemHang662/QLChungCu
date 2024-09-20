@@ -1,0 +1,71 @@
+.login-container {
+  display: flex;
+  height: 560px; /* Full viewport height for vertical centering */
+  background-color: whitesmoke;
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI_0ZQ5rno0ZkGXaEebgq1L2A3IuHS6FZ8ntvS5YUDvuKF1ME_x-os1tdTNozkoUG5yZRhqyBfqtJ0Wt9t1QSfO5Ia_b4pGRC3EV4Y-9_d2SqEIa6Dlc3a80gLoZY9M2q0PZtyZ2PeYk53/s1600/hinh-anh-phong-khach-cua-hinode-city.jpg');
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text */
+  color: black;
+}
+
+.formContainer1 {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width */
+  max-width: 500px; /* Maximum width for the form */
+  height: 450px !important;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 7px black;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.left-side1 {
+  display: none; /* Hide left side for a more focused design */
+}
+
+.right-side1 {
+  width: 100%;
+}
+
+.right-side1 h1 {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.right-side1 .form-group {
+  margin: 15px;
+}
+
+.right-side1 .form-group label {
+  margin-bottom: 10px;
+}
+
+.right-side1 .form-control {
+  background-color: rgb(232, 241, 249);
+}
+
+.icon {
+  height: 55px;
+  width: 55px;
+  background-color: rgb(232, 241, 249);
+}
+
+.submit1  {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: auto;
+  height: 50px;
+  border-radius: 0;
+}
+
+.alert{
+  margin-top: 10px;
+}
